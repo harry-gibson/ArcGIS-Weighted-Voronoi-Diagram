@@ -172,10 +172,12 @@ del valArray
 # the cython has been compiled for int32 specifically
 assignmentsDType = np.int32
 
+doEllipsoid = 0 if distMethod == "Haversine" else 1
+
 # do thinking
 arcpy.AddMessage("Beginning distance allocation")
 vCalc = weighted_voronoi(rowLats, colLngs, oidToUse, valToUse, latToUse, lonToUse)
-assignments = np.asarray(vCalc.calculate())
+assignments = np.asarray(vCalc.calculate(useEllipsoid=doEllipsoid))
 
 # Save the array back to a raster
 arcpy.AddMessage("Assignments completed, saving to raster")
