@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Center for International Earth Science Information Network (CIESIN), olumbia University; International Food Policy Research Institute (IPFRI), the World Bank; and Centro Internacional de Agricultura Tropical (CIAT),</origin>
+				<pubdate>2004</pubdate>
+				<title Sync="TRUE">pop_places_50k</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<onlink>\\STREEP\C\Inetpub\wwwroot\access\download\access_100k\pop_places_100k.shp</onlink>
+				<ftname Sync="TRUE">pop_places_50k</ftname></citeinfo>
+		</citation>
+		<descript>
+			<abstract>1.   Populated places with a population of 50,000 people or more in the year 2000 were selected from the human settlements database provided by CIESIN, Columbia University (CIESIN, 2004). The human settlements database is one of many available from the Global Rural and Urban Mapping Project (Balk et al., 2004) and comprises a global dataset of about 55,000 cities and towns with populations of 1,000 or more. Each point has geographical coordinates and associated tabular information on its population and data sources. Population data were gathered primarily from official statistical offices (census data) and secondarily from other sources, such as gazetteers. Where the records for populated places did not include latitude and longitude coordinates, those were taken from the NIMA database of populated places.
+      Source: http://sedac.ciesin.columbia.edu/gpw/index.jsp
+      Further information: Balk, D., Pozzi, F., Yetman, G., Deichmann, U. and Nelson, A. 2004. The distribution of people and the dimension of place: methodologies to improve the global estimation of urban extents. Working Paper, CIESIN, Columbia University. Palisades, NY. pp 31.
+
+2. Additional cities (especially for western China) were taken from a World Bank database on Air Pollution in World Cities.
+      Source: http://go.worldbank.org/3RDFO7T6M0
+      Further information: Pandey, D., Wheeler, D., Ostro, B., Deichmann, U., Hamilton, K. and Bolt, K. 2006. Ambient Particulate Matter Concentrations in Residential and Pollution Hotspot areas of World Cities: New Estimates based on the Global Model of Ambient Particulates (GMAPS), The World Bank Development Economics Research Group and the Environment Department Working Paper, The World Bank, Washington DC.
+</abstract>
+			<purpose>To allow analysis of urban and rural population figures based on a consistent global dataset.</purpose>
+			<langdata Sync="TRUE">en</langdata></descript>
+		<timeperd>
+			<timeinfo>
+				<mdattim>
+					<sngdate>
+						<caldate>1990</caldate>
+					</sngdate>
+					<sngdate>
+						<caldate>1995</caldate>
+					</sngdate>
+					<sngdate>
+						<caldate>2000</caldate>
+					</sngdate>
+				</mdattim>
+			</timeinfo>
+			<current>2000</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-157.826182</westbc>
+				<eastbc Sync="TRUE">178.430000</eastbc>
+				<northbc Sync="TRUE">69.500000</northbc>
+				<southbc Sync="TRUE">-53.783333</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">-157.826182</leftbc><rightbc Sync="TRUE">178.430000</rightbc><bottombc Sync="TRUE">-53.783333</bottombc><topbc Sync="TRUE">69.500000</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords.</themekt>
+				<themekey>REQUIRED: Common-use word or phrase used to describe the subject of the data set.</themekey>
+			</theme>
+		</keywords>
+		<accconst>
+These data are for noncommercial use only. No third party distribution of all, 
+or parts, of the electronic files is authorized. The data used in the creation of 
+this dataset were provided to CIESIN by the organizations identified in the source data.
+</accconst>
+		<useconst>
+These data are for noncommercial use only. No third party distribution of all, 
+or parts, of the electronic files is authorized. The data used in the creation of 
+this dataset were provided to CIESIN by the organizations identified in the source data.
+</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntemail>gpw@ciesin.columbia.edu</cntemail>
+			</cntinfo>
+		</ptcontac>
+		<datacred>Center for International Earth Science Information Network (CIESIN),
+Columbia University; International Food Policy Research Institute (IPFRI),
+the World Bank; and Centro Internacional de Agricultura Tropical (CIAT),
+2004. Global Rural-Urban Mapping Project (GRUMP): Settlement Points.
+Palisades, NY: CIESIN, Columbia University. Available at
+http://sedac.ciesin.columbia.edu/gpw.
+AND
+Pandey, D., Wheeler, D., Ostro, B., Deichmann, U., Hamilton, K. and Bolt, K. 2006. Ambient Particulate Matter Concentrations in Residential and Pollution Hotspot areas of World Cities: New Estimates based on the Global Model of Ambient Particulates (GMAPS), The World Bank Development Economics Research Group and the Environment Department Working Paper, The World Bank, Washington DC. </datacred>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.2.6.1500</native>
+		<natvform Sync="TRUE">Shapefile</natvform></idinfo>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="pop_places_50k">
+				<sdtstype Sync="TRUE">Entity point</sdtstype>
+				<ptvctcnt Sync="TRUE">8518</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="pop_places_50k"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Point</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">8518</efeacnt><spindex Sync="TRUE">TRUE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<geograph>
+				<latres Sync="TRUE">0.000000</latres>
+				<longres Sync="TRUE">0.000000</longres>
+				<geogunit Sync="TRUE">Decimal degrees</geogunit>
+			</geograph>
+			<geodetic>
+				<horizdn Sync="TRUE">D_WGS_1984</horizdn>
+				<ellips Sync="TRUE">WGS_1984</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257224</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn></cordsysn></horizsys>
+	</spref>
+	<eainfo>
+		<detailed Name="pop_places_50k">
+			<enttyp>
+				<enttypl Sync="TRUE">pop_places_50k</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">8518</enttypc></enttyp>
+			<attr>
+				<attrlabl>FID</attrlabl>
+				<attrdef>Internal feature number.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>Shape</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>AREA</attrlabl>
+				<attrtype Sync="TRUE">Float</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">11</atnumdec></attr>
+			<attr>
+				<attrlabl>PERIMETER</attrlabl>
+				<attrtype Sync="TRUE">Float</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">11</atnumdec></attr>
+			<attr>
+				<attrlabl>COUNTRY</attrlabl>
+				<attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">9</attwidth></attr>
+			<attr>
+				<attrlabl>ISO3</attrlabl>
+				<attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">9</attwidth></attr>
+			<attr>
+				<attrlabl>POP</attrlabl>
+				<attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">3</attwidth></attr>
+			<attr><attrlabl Sync="TRUE">P_50000_</attrlabl><attalias Sync="TRUE">P_50000_</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">37</attwidth></attr><attr><attrlabl Sync="TRUE">P_50000_ID</attrlabl><attalias Sync="TRUE">P_50000_ID</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">44</attwidth></attr><attr><attrlabl Sync="TRUE">CITY</attrlabl><attalias Sync="TRUE">CITY</attalias><attrtype Sync="TRUE">Float</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">11</atnumdec></attr><attr><attrlabl Sync="TRUE">ID</attrlabl><attalias Sync="TRUE">ID</attalias><attrtype Sync="TRUE">Float</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">11</atnumdec></attr><attr><attrlabl Sync="TRUE">POLYGONID</attrlabl><attalias Sync="TRUE">POLYGONID</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">9</attwidth></attr><attr><attrlabl Sync="TRUE">SCALE</attrlabl><attalias Sync="TRUE">SCALE</attalias><attrtype Sync="TRUE">Float</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">11</atnumdec></attr><attr><attrlabl Sync="TRUE">ANGLE</attrlabl><attalias Sync="TRUE">ANGLE</attalias><attrtype Sync="TRUE">Float</attrtype><attwidth Sync="TRUE">19</attwidth><atnumdec Sync="TRUE">11</atnumdec></attr></detailed>
+	</eainfo>
+	<distinfo>
+		<resdesc>Downloadable Data</resdesc>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<transize>0.100</transize>
+					<dssize Sync="TRUE">0.228</dssize></digtinfo>
+			</digform>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20081015</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>REQUIRED: The organization responsible for the metadata information.</cntorg>
+					<cntper>REQUIRED: The person responsible for the metadata information.</cntper>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>REQUIRED: The mailing and/or physical address for the organization or individual.</addrtype>
+					<city>REQUIRED: The city of the address.</city>
+					<state>REQUIRED: The state or province of the address.</state>
+					<postal>REQUIRED: The ZIP or other postal code of the address.</postal>
+				</cntaddr>
+				<cntvoice>REQUIRED: The telephone number by which individuals can speak to the organization or individual.</cntvoice>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<langmeta Sync="TRUE">en</langmeta><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<Esri><CreaDate>20171017</CreaDate><CreaTime>15125400</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20081015</SyncDate><SyncTime>10081000</SyncTime><ModDate>20081015</ModDate><ModTime>10082900</ModTime><ArcGISFormat>1.0</ArcGISFormat><DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20171017" Time="151326">CalculateField Madagascar_Fake_Capital POP 128893 VB #</Process></lineage></DataProperties></Esri><dataqual><lineage><procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\DOCUME~1\nelsoan\LOCALS~1\Temp\2\xml28.tmp</srcused><date Sync="TRUE">20080508</date><time Sync="TRUE">11285200</time></procstep></lineage></dataqual><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.2.6.1500</envirDesc><dataLang><languageCode Sync="TRUE" value="en"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">pop_places_50k</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">-157.826182</westBL><eastBL Sync="TRUE">178.43</eastBL><northBL Sync="TRUE">69.5</northBL><southBL Sync="TRUE">-53.783333</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-157.826182</westBL><eastBL Sync="TRUE">178.43</eastBL><northBL Sync="TRUE">69.5</northBL><southBL Sync="TRUE">-53.783333</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="en"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\KNIGHTLEY\Export\access_50k\pop_places_50k.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">0.228</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">GCS_WGS_1984</identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><topLvl><TopoLevCd Sync="TRUE" value="001"></TopoLevCd></topLvl><geometObjs Name="pop_places_50k"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="004"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">8518</geoObjCnt></geometObjs></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20081015</mdDateSt></metadata>
