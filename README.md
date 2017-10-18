@@ -8,7 +8,8 @@ numeric attribute provided with the point data.
 
 This version of the code implements the core algorithm in optimised and
 multithreaded C (generated from Python via the Cython library) and as
-such runs many times faster than the original version.
+such runs many times faster than the original version (e.g. around 8-10*
+faster even including the data input/output processing time).
 
 ## Parameters/Usage
 
