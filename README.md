@@ -64,3 +64,6 @@ it is likely that you would need to recompile.
 * It requires the source data to be in a GCS (e.g., WGS84 or NAD83).
 * Both the Haversine and Vincenty geodesic distance methods have
 fixed parameters for earth radius and ellipsoid axis lengths.
+* If there are input points closer together than the specified cell
+resolution then only one of them will be used as a location for
+allocation - not necessarily the one with the highest weight.
