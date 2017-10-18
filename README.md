@@ -6,6 +6,10 @@ distance calculations. Instead of assigning raster cells to source
 points based solely on distance, the distance is divided by some
 numeric attribute provided with the point data.
 
+This version of the code implements the core algorithm in optimised and
+multithreaded C (generated from Python via the Cython library) and as
+such runs many times faster than the original version.
+
 ## Parameters/Usage
 
 All parameters are required.
@@ -42,19 +46,21 @@ overridden to allow for buffering of the point source extent.
 
 ## Python packages included
 
-The [Haversine 0.4.5](https://pypi.python.org/pypi/haversine)
+A translated version of the
+[Haversine 0.4.5](https://pypi.python.org/pypi/haversine)
 and [Vincenty 0.1.4](https://pypi.python.org/pypi/vincenty)
 Python packages are included with the toolbox.
 
 ## Compatibility
 
-Tested using ArcGIS for Desktop 10.4.1 using 64-bit background
-geoprocessing.
+Tested using ArcGIS for Desktop 10.5.1 using 64-bit background
+geoprocessing. The compiled version of the C code (the .pyd) file is
+included in the folder and is compatible with the version of Python
+used in this ArcGIS environment. It may work with other versions but
+it is likely that you would need to recompile.
 
 ## Known Issues and Limitations
 
 * It requires the source data to be in a GCS (e.g., WGS84 or NAD83).
-* It's slow for higher-resolution runs. Better use of NumPy may
-help.
 * Both the Haversine and Vincenty geodesic distance methods have
 fixed parameters for earth radius and ellipsoid axis lengths.
