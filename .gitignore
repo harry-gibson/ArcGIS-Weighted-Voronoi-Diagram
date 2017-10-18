@@ -1,2 +1,4 @@
 # No bytecode here
 *.pyc
+build/
+.idea/
