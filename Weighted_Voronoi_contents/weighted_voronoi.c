@@ -651,6 +651,8 @@ struct __pyx_vtabstruct_16weighted_voronoi_weighted_voronoi {
   __Pyx_memviewslice (*calculate)(struct __pyx_obj_16weighted_voronoi_weighted_voronoi *, int __pyx_skip_dispatch, struct __pyx_opt_args_16weighted_voronoi_16weighted_voronoi_calculate *__pyx_optional_args);
 };
 static struct __pyx_vtabstruct_16weighted_voronoi_weighted_voronoi *__pyx_vtabptr_16weighted_voronoi_weighted_voronoi;
+static CYTHON_INLINE float __pyx_f_16weighted_voronoi_16weighted_voronoi_haversine(struct __pyx_obj_16weighted_voronoi_weighted_voronoi *, float, float, float, float);
+static CYTHON_INLINE float __pyx_f_16weighted_voronoi_16weighted_voronoi_vincenty(struct __pyx_obj_16weighted_voronoi_weighted_voronoi *, float, float, float, float);
 
 
 /* "View.MemoryView":302
@@ -1055,8 +1057,8 @@ static int __Pyx_check_binary_version(void);
 
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
-static float __pyx_f_16weighted_voronoi_16weighted_voronoi_haversine(CYTHON_UNUSED struct __pyx_obj_16weighted_voronoi_weighted_voronoi *__pyx_v_self, float __pyx_v_y1, float __pyx_v_x1, float __pyx_v_y2, float __pyx_v_x2); /* proto*/
-static float __pyx_f_16weighted_voronoi_16weighted_voronoi_vincenty(CYTHON_UNUSED struct __pyx_obj_16weighted_voronoi_weighted_voronoi *__pyx_v_self, float __pyx_v_y1, float __pyx_v_x1, float __pyx_v_y2, float __pyx_v_x2); /* proto*/
+static CYTHON_INLINE float __pyx_f_16weighted_voronoi_16weighted_voronoi_haversine(CYTHON_UNUSED struct __pyx_obj_16weighted_voronoi_weighted_voronoi *__pyx_v_self, float __pyx_v_y1, float __pyx_v_x1, float __pyx_v_y2, float __pyx_v_x2); /* proto*/
+static CYTHON_INLINE float __pyx_f_16weighted_voronoi_16weighted_voronoi_vincenty(CYTHON_UNUSED struct __pyx_obj_16weighted_voronoi_weighted_voronoi *__pyx_v_self, float __pyx_v_y1, float __pyx_v_x1, float __pyx_v_y2, float __pyx_v_x2); /* proto*/
 static __Pyx_memviewslice __pyx_f_16weighted_voronoi_16weighted_voronoi_calculate(struct __pyx_obj_16weighted_voronoi_weighted_voronoi *__pyx_v_self, int __pyx_skip_dispatch, struct __pyx_opt_args_16weighted_voronoi_16weighted_voronoi_calculate *__pyx_optional_args); /* proto*/
 static char *__pyx_memoryview_get_item_pointer(struct __pyx_memoryview_obj *__pyx_v_self, PyObject *__pyx_v_index); /* proto*/
 static PyObject *__pyx_memoryview_is_slice(struct __pyx_memoryview_obj *__pyx_v_self, PyObject *__pyx_v_obj); /* proto*/
@@ -1658,12 +1660,12 @@ static int __pyx_pf_16weighted_voronoi_16weighted_voronoi___cinit__(struct __pyx
 /* "weighted_voronoi.pyx":38
  * 
  * 
- *     cdef float haversine(self, float y1, float x1, float y2, float x2) nogil:             # <<<<<<<<<<<<<<
+ *     cdef inline float haversine(self, float y1, float x1, float y2, float x2) nogil:             # <<<<<<<<<<<<<<
  *         """ Calculate the great-circle distance bewteen two points on the Earth surface.
  * 
  */
 
-static float __pyx_f_16weighted_voronoi_16weighted_voronoi_haversine(CYTHON_UNUSED struct __pyx_obj_16weighted_voronoi_weighted_voronoi *__pyx_v_self, float __pyx_v_y1, float __pyx_v_x1, float __pyx_v_y2, float __pyx_v_x2) {
+static CYTHON_INLINE float __pyx_f_16weighted_voronoi_16weighted_voronoi_haversine(CYTHON_UNUSED struct __pyx_obj_16weighted_voronoi_weighted_voronoi *__pyx_v_self, float __pyx_v_y1, float __pyx_v_x1, float __pyx_v_y2, float __pyx_v_x2) {
   double __pyx_v_xr1;
   double __pyx_v_xr2;
   double __pyx_v_yr1;
@@ -1759,7 +1761,7 @@ static float __pyx_f_16weighted_voronoi_16weighted_voronoi_haversine(CYTHON_UNUS
   /* "weighted_voronoi.pyx":38
  * 
  * 
- *     cdef float haversine(self, float y1, float x1, float y2, float x2) nogil:             # <<<<<<<<<<<<<<
+ *     cdef inline float haversine(self, float y1, float x1, float y2, float x2) nogil:             # <<<<<<<<<<<<<<
  *         """ Calculate the great-circle distance bewteen two points on the Earth surface.
  * 
  */
@@ -1772,12 +1774,12 @@ static float __pyx_f_16weighted_voronoi_16weighted_voronoi_haversine(CYTHON_UNUS
 /* "weighted_voronoi.pyx":69
  * 
  *     @cython.cdivision(True)
- *     cdef float vincenty(self, float y1, float x1, float y2, float x2) nogil:             # <<<<<<<<<<<<<<
+ *     cdef inline float vincenty(self, float y1, float x1, float y2, float x2) nogil:             # <<<<<<<<<<<<<<
  *         cdef:
  *             Py_ssize_t iteration
  */
 
-static float __pyx_f_16weighted_voronoi_16weighted_voronoi_vincenty(CYTHON_UNUSED struct __pyx_obj_16weighted_voronoi_weighted_voronoi *__pyx_v_self, float __pyx_v_y1, float __pyx_v_x1, float __pyx_v_y2, float __pyx_v_x2) {
+static CYTHON_INLINE float __pyx_f_16weighted_voronoi_16weighted_voronoi_vincenty(CYTHON_UNUSED struct __pyx_obj_16weighted_voronoi_weighted_voronoi *__pyx_v_self, float __pyx_v_y1, float __pyx_v_x1, float __pyx_v_y2, float __pyx_v_x2) {
   CYTHON_UNUSED Py_ssize_t __pyx_v_iteration;
   double __pyx_v_U1;
   double __pyx_v_U2;
@@ -2165,7 +2167,7 @@ static float __pyx_f_16weighted_voronoi_16weighted_voronoi_vincenty(CYTHON_UNUSE
   /* "weighted_voronoi.pyx":69
  * 
  *     @cython.cdivision(True)
- *     cdef float vincenty(self, float y1, float x1, float y2, float x2) nogil:             # <<<<<<<<<<<<<<
+ *     cdef inline float vincenty(self, float y1, float x1, float y2, float x2) nogil:             # <<<<<<<<<<<<<<
  *         cdef:
  *             Py_ssize_t iteration
  */
@@ -2571,7 +2573,7 @@ static __Pyx_memviewslice __pyx_f_16weighted_voronoi_16weighted_voronoi_calculat
                 #define unlikely(x) (x)
             #endif
             #ifdef _OPENMP
-            #pragma omp parallel private(__pyx_v_y) private(__pyx_t_14, __pyx_t_26, __pyx_t_30, __pyx_t_28, __pyx_t_18, __pyx_t_23, __pyx_t_17, __pyx_t_27, __pyx_t_29, __pyx_t_7, __pyx_t_24, __pyx_t_16, __pyx_t_21, __pyx_t_20, __pyx_t_31, __pyx_t_15, __pyx_t_25, __pyx_t_19, __pyx_t_22) shared(__pyx_parallel_why)
+            #pragma omp parallel private(__pyx_v_y) private(__pyx_t_14, __pyx_t_26, __pyx_t_30, __pyx_t_28, __pyx_t_18, __pyx_t_23, __pyx_t_17, __pyx_t_27, __pyx_t_29, __pyx_t_7, __pyx_t_16, __pyx_t_21, __pyx_t_20, __pyx_t_25, __pyx_t_15, __pyx_t_24, __pyx_t_31, __pyx_t_19, __pyx_t_22) shared(__pyx_parallel_why)
             #endif /* _OPENMP */
             {
                 /* Initialize private variables to invalid values */
@@ -2697,7 +2699,7 @@ static __Pyx_memviewslice __pyx_f_16weighted_voronoi_16weighted_voronoi_calculat
  *                         else:
  *                             curScore = self.haversine(pointLats[pt], pointLons[pt],
  */
-                                      __pyx_v_curScore = (((struct __pyx_vtabstruct_16weighted_voronoi_weighted_voronoi *)__pyx_v_self->__pyx_vtab)->vincenty(__pyx_v_self, (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_pointLats.data) + __pyx_t_21)) ))), (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_pointLons.data) + __pyx_t_22)) ))), (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_lats.data) + __pyx_t_23)) ))), (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_lons.data) + __pyx_t_24)) )))) / (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_pointWts.data) + __pyx_t_25)) ))));
+                                      __pyx_v_curScore = (__pyx_f_16weighted_voronoi_16weighted_voronoi_vincenty(__pyx_v_self, (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_pointLats.data) + __pyx_t_21)) ))), (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_pointLons.data) + __pyx_t_22)) ))), (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_lats.data) + __pyx_t_23)) ))), (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_lons.data) + __pyx_t_24)) )))) / (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_pointWts.data) + __pyx_t_25)) ))));
                                       goto __pyx_L18;
                                     }
                                     /*else*/ {
@@ -2738,7 +2740,7 @@ static __Pyx_memviewslice __pyx_f_16weighted_voronoi_16weighted_voronoi_calculat
  * 
  *                         if curScore < minScore:
  */
-                                      __pyx_v_curScore = (((struct __pyx_vtabstruct_16weighted_voronoi_weighted_voronoi *)__pyx_v_self->__pyx_vtab)->haversine(__pyx_v_self, (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_pointLats.data) + __pyx_t_26)) ))), (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_pointLons.data) + __pyx_t_27)) ))), (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_lats.data) + __pyx_t_28)) ))), (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_lons.data) + __pyx_t_29)) )))) / (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_pointWts.data) + __pyx_t_30)) ))));
+                                      __pyx_v_curScore = (__pyx_f_16weighted_voronoi_16weighted_voronoi_haversine(__pyx_v_self, (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_pointLats.data) + __pyx_t_26)) ))), (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_pointLons.data) + __pyx_t_27)) ))), (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_lats.data) + __pyx_t_28)) ))), (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_lons.data) + __pyx_t_29)) )))) / (*((double *) ( /* dim=0 */ ((char *) (((double *) __pyx_v_pointWts.data) + __pyx_t_30)) ))));
                                     }
                                     __pyx_L18:;
 

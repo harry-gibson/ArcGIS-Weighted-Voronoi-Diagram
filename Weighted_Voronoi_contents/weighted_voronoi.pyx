@@ -35,7 +35,7 @@ cdef class weighted_voronoi:
         self.pointLons = pointLons
 
 
-    cdef float haversine(self, float y1, float x1, float y2, float x2) nogil:
+    cdef inline float haversine(self, float y1, float x1, float y2, float x2) nogil:
         """ Calculate the great-circle distance bewteen two points on the Earth surface.
     
         :input: four floats, containing the latitude and longitude of each point
@@ -66,7 +66,7 @@ cdef class weighted_voronoi:
         return h  # in kilometers
 
     @cython.cdivision(True)
-    cdef float vincenty(self, float y1, float x1, float y2, float x2) nogil:
+    cdef inline float vincenty(self, float y1, float x1, float y2, float x2) nogil:
         cdef:
             Py_ssize_t iteration
             double U1, U2, L, Lambda, sinU1, cosU1, sinU2, cosU2
