@@ -3,6 +3,11 @@ from time import time
 from weighted_voronoi import weighted_voronoi
 import arcpy
 import numpy as np
+try:
+    import numexpr as ne
+    useNE = True
+except ImportError:
+    useNE = False
 from math import ceil
 
 startTime = time()
@@ -46,18 +51,31 @@ def cell_center_lng(col, initlng, xsize, numcols):
     """
     return initlng + (col) * xsize
 
-def haversine_np(latGrid, cosLatGrid, lonGrid, latPoint, lonPoint):
-    '''Calculates haversine distance from all points in a grid to a single point
+def haversine_cost(latGrid, cosLatGrid, lonGrid, latPoint, lonPoint, costPoint):
+    '''Calculates distance / cost from all points in a grid to a single weighted point
 
-    Implemented using numpy arrays. Values must be in radians.
+    Implemented using numpy arrays. Uses numexpr if available. Values must be in radians.
     Adapted from https://stackoverflow.com/a/29546836
     TODO - use numexpr for better performance on large grids'''
+
+    if useNE:
+        dLon = ne.evaluate("lonGrid - lonPoint")
+        dLat = ne.evaluate("latGrid - latPoint")
+        a = ne.evaluate("sin(dLat/2.0)**2 + cosLatGrid * cos(latPoint) * sin(dLon / 2.0)**2")
+        # skip the divide if pointless
+        if costPoint != 1:
+            cost = ne.evaluate("(2 * arcsin(sqrt(a)) * 6372.8) / costPoint")
+        else:
+            cost = ne.evaluate("(2 * arcsin(sqrt(a)) * 6372.8)")
+        return cost
     dLon = lonGrid - lonPoint
     dLat = latGrid - latPoint
     a = np.sin(dLat/2.0)**2 + cosLatGrid * np.cos(latPoint) * np.sin(dLon / 2.0)**2
-    c = 2 * np.arcsin(np.sqrt(a))
-    km = 6372.8 * c
-    return km
+    if costPoint != 1:
+        cost = 2 * np.arcsin(np.sqrt(a)) * 6372.8 / costPoint
+    else:
+        cost = 2 * np.arcsin(np.sqrt(a)) * 6372.8
+    return cost
 
 # Get the spatial reference of the source (and dest)
 spatialRef = arcpy.Describe(pointSource).spatialReference
@@ -199,6 +217,8 @@ fivePercentPoints = int(ceil(nPoints / 20.0) + 1)
 
 arcpy.AddMessage("Beginning distance allocation")
 
+arcpy.AddMessage("Using multi-threaded numexpr: "+str(useNE))
+
 # pre-convert the environment lat/longs into radians and cos just once
 latRads = np.radians(rowLats)
 lonRads = np.radians(colLngs)
@@ -226,8 +246,8 @@ for i in range(nPoints):
                          % (i + 1, nPoints, int((i+1)/float(nPoints)*100),
                             time() - startTime))
     oid = oidToUse[i]
-    dists = haversine_np(latsGrid, cosLatsGrid, lonsGrid,
-                         latToUse[i], lonToUse[i]) / valToUse[i]
+    dists = haversine_cost(latsGrid, cosLatsGrid, lonsGrid,
+                         latToUse[i], lonToUse[i], valToUse[i])
     updateWhere = dists < minScoresNP
     assignments[updateWhere] = oid
     minScoresNP[updateWhere] = dists[updateWhere]
