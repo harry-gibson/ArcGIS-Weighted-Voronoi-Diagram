@@ -68,3 +68,11 @@ fixed parameters for earth radius and ellipsoid axis lengths.
 * If there are input points closer together than the specified cell
 resolution then only one of them will be used as a location for
 allocation - not necessarily the one with the highest weight.
+
+## Notes
+Here are a few relevant links for this algorithm and alternatives:
+https://www.cgal.org/documentation.html
+https://github.com/CGAL/cgal-swig-bindings
+https://github.com/wiringa/ArcGIS-Weighted-Voronoi-Diagram
+https://github.com/UNTGeography/VoronoiDiagramsGIS
+http://www.sciencedirect.com/science/article/pii/S0098300411003037
